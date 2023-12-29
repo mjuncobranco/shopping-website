@@ -1,0 +1,33 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Antic+Slab&family=Comfortaa:wght@500;600&family=Kameron:wght@400;700&family=Pacifico&display=swap");
+
+html {
+  font-size: 0.785rem;
+}
+
+body {
+  font-family: "Antic Slab", serif;
+  height: 100vh;
+  padding-top: 11.5rem;
+}
+/* Header */
+.fa-bag-shopping {
+  color: #222222;
+  transform: rotate(25deg);
+}
+.logo {
+  font-size: 1.9rem;
+  color: #ffc107;
+}
+.fa-basket-shopping {
+  color: #fefefe;
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+.fa-basket-shopping:hover {
+  color: #c61a27 !important;
+  opacity: 0.9;
+  -webkit-transform: rotateZ(-30deg);
+  -ms-transform: rotateZ(-30deg);
+  transform: rotateZ(-30deg);
+}
