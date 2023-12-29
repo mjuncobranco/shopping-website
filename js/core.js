@@ -64,7 +64,7 @@ const GenerateContent = class {
     html = html.trim();
     card.innerHTML = html;
     return card.content.firstElementChild;
-  }
+  };
   setPageContent = (fruits) => {
     let card = "";
     let productContainer = document.querySelector('#products-list');
