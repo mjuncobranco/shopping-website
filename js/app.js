@@ -83,4 +83,16 @@ window.addEventListener("load", () => {
       //updateCartTotal()
     } 
   }
+  //add a new item to cart by clicking a cart button
+  const addToCartClicked = () => {
+    let buttonClicked = e.target;
+    let shopItem = buttonClicked.parentNode.parentNode.parentNode;
+    let productId= shopItem.getAttribute("product-id");
+    let title= shopItem.firstElementChild.getAttribute("alt");
+    let productName= shopItem.lastElementChild.firstElementChild.textContent;
+    let price= shopItem.children[1].firstElementChild.innerText.replace("€/Kg","");
+    let imageSrc= shopItem.firstElementChild.src;
+    addItemToCart(productId, title, productName, price, imageSrc);
+    //updateCartTotal();
+  }
 });
