@@ -18,6 +18,13 @@ window.addEventListener("load", () => {
     }
   );
 
+  let addToCartButtons = document.querySelectorAll(".card-body");
+  for (let index = 0; index < addToCartButtons.length; index++) {
+    let button = addToCartButtons[index];
+    button.addEventListener("click", (e) => {
+      //addToCartClicked(e)
+    });
+  }
   
 
 });
