@@ -60,5 +60,12 @@ window.addEventListener("load", () => {
     toggleShoppingControls(false);
   }
  
-  
+   //simulating purchase and show alerts
+   const purchaseClicked = () => {
+    document.querySelector("tbody").innerHTML = "";
+    //updateCartTotal()
+    toggleShoppingControls(false);
+    cartPurchased.show();
+
+  }
 });
