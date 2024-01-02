@@ -66,6 +66,9 @@ window.addEventListener("load", () => {
     //updateCartTotal()
     toggleShoppingControls(false);
     cartPurchased.show();
+    setTimeout(() => {
+      cartPurchased.hide();
+    }, 2000);
 
   }
 });
