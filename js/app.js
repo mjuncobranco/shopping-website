@@ -38,7 +38,21 @@ window.addEventListener("load", () => {
   document.querySelector("#cart").addEventListener("click",()=> {
     cart.classList.remove("hvr-pulse");
   });
+  //activate/deactivate cart buttons 
+  const toggleShoppingControls = (enable) => {
+    if (enable) {
+      document.querySelector("#empty-cart").classList.remove("disabled");
+      document.querySelector("#btn-purchase").classList.remove("disabled");
+      document.querySelector("#empty-cart").classList.add("hvr-pulse");
 
+
+    }else {
+      document.querySelector("#empty-cart").classList.add("disabled");
+      document.querySelector("#empty-cart").classList.add("disabled");
+      document.querySelector("#empty-cart").classList.remove("hvr-pulse");
+
+    }
+  }
   
 
   
