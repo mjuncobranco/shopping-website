@@ -180,4 +180,17 @@ window.addEventListener("load", () => {
           addedToCart.hide();
         }, 1800);
     };
+    const updateCartTotal = () => {
+      let cartItemContainer = document.querySelector("table");
+      let cartPrices = cartItemContainer.querySelectorAll(".pricing-card-title");
+      let cartQuantities = cartItemContainer.querySelectorAll("input");
+      let total = 0;
+      for (let i = 0; i < cartPrices.length; i++) {
+        let price = cartPrices[i].textContent;
+        let quantity = cartQuantities[i].value;
+        price = parseFloat(price.replace(/[^0-9|^.]/, ""));
+        total = total + price * quantity;
+      }
+      document.querySelector("#total-count").innerText = total.toFixed(2);
+    };
 });
