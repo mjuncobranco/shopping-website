@@ -36,7 +36,7 @@
         <a href="#" class="btn btn-dark btn-lg">Sign Up</a>
       </nav>
     </header>
-    <!--Modal cards-->
+    <!--Modal cart-->
     <div
       class="modal fade"
       id="shoppingCart"
@@ -113,6 +113,40 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Alerts -->
+    <div class="modal fade" id="cartPurchaser" tabindex="-1" aria-labelledby="alert1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content alert alert-success" role="alert">
+          <p class="text-center alert-heading pt-3">
+            <strong>Done!</strong>Thanks for your purchase!
+            <i class="fa-solid fa-face-laugh-wink"></i>
+            <i class="fa-solid fa-face-thumbs-up"></i>
+            <i class="fa-solid fa-face-thumbs-up"></i>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="addedToCart" tabindex="-1" aria-labelledby="alert2" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content alert alert-info" role="alert">
+          <p class="text-center alert-heading pt-3">
+            <strong>Done!</strong>This product has been added to your wishlist.
+            <i class="fa-solid fa-circle-check"></i>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="alreadyAddedToCart" tabindex="-1" aria-labelledby="alert3" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content alert alert-warning" role="alert">
+          <p class="text-center alert-heading pt-3">
+            <strong>Already added!</strong>Go to your cart to change quantity.
+            <i class="fa-solid fa-circle-exclamation"></i>
+           
+          </p>
         </div>
       </div>
     </div>
