@@ -193,4 +193,27 @@ window.addEventListener("load", () => {
       }
       document.querySelector("#total-count").innerText = total.toFixed(2);
     };
+
+    const list_items = document.querySelectorAll(".draggable");
+    const cart = document.querySelector("#cart");
+    let draggedItem = null;
+
+    for (let i = 0; i < list_items.length; i++) {
+      const item = list_items[i];
+
+      item.addEventListener("dragstart", () => {
+        draggedItem = item;
+        setTimeout(() => {
+          item.style.opacity = "0.5";
+        }, 200);
+      });
+
+      item.addEventListener("dragend", () => {
+        setTimeout(() => {
+          draggedItem.style.opacity = "1";
+          draggedItem = null;
+        }, 200);
+      });
+    }
+    
 });
