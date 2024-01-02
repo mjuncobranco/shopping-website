@@ -215,5 +215,29 @@ window.addEventListener("load", () => {
         }, 200);
       });
     }
-    
+    cart.addEventListener("dragover", (e) => {
+      e.preventDefault();
+    });
+  
+    cart.addEventListener("dragenter", (e) => {
+      e.preventDefault();
+    });
+  
+    // cart.addEventListener('dragleave',  (e)=> {
+    // });
+  
+    cart.addEventListener("drop", () => {
+      cart.classList.add("hvr-pulse");
+      let productId = draggedItem.getAttribute("product-id");
+      let title = draggedItem.firstElementChild.getAttribute("alt");
+      let productName = draggedItem.lastElementChild.textContent;
+      let price = draggedItem.children[1].firstElementChild.innerText.replace(
+        " € / Kg",
+        ""
+      );
+      let imageSrc = draggedItem.firstElementChild.src;
+      addItemToCart(productId, title, productName, price, imageSrc);
+      updateCartTotal();
+    });
+
 });
