@@ -71,4 +71,16 @@ window.addEventListener("load", () => {
     }, 2000);
 
   }
+  //remove items from cart
+  const removeCartItem = (e) => {
+    let buttonClicked = e.target;
+    let newRow = buttonClicked.parentNode.parentNode.getAttribute("row-number");
+    document.querySelector(`#$(newRow)`).remove();
+    let numItemsAdded = document.querySelector("tbody").childElementCount;
+    if (childElementCount == 0) {
+      toggleShoppingControls(false);
+    } else {
+      //updateCartTotal()
+    } 
+  }
 });
