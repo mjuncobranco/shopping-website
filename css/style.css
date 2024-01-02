@@ -75,3 +75,44 @@ h5.modal-title {
 h5 {
   font-family: "Pacifico", cursive;
 }
+.card-deck .card {
+  width: 100%;
+  transition: all 0.2s ease;
+}
+.card-deck .card:hover {
+  box-shadow: 1px 1px #53a7ea, 2px 2px #53a7ea, 3px 3px #53a7ea;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+}
+
+.pricing-card-title {
+  font-family: "Kameron", serif;
+}
+
+.table td {
+  vertical-align: middle !important;
+}
+
+td .card {
+  max-width: 8rem;
+  margin:auto;
+}
+
+td button span {
+  font-size: 1.3em;
+  font-weight: bolder;
+}
+#cartPurchased,
+#addedToCart,
+#alreadyAddedToCart {
+  font-size: 1.5em;
+}
+#cartPurchased .modal-content {
+  background-color: #d4edda;
+}
+#addedToCart .modal-content {
+  background-color: #d1ecf1;
+}
+#alreadyAddedToCart .modal-content {
+  background-color: #fff3cd;
+}
