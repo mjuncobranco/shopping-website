@@ -34,6 +34,10 @@ window.addEventListener("load", () => {
   document.querySelector("#btn-purchase").addEventListener("click",() => {
     //purchaseClicked();
   });
+  //stop pulsing effect on shopping cart
+  document.querySelector("#cart").addEventListener("click",()=> {
+    cart.classList.remove("hvr-pulse");
+  });
 
   
 
