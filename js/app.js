@@ -30,5 +30,12 @@ window.addEventListener("load", () => {
     //emptyCart();
   });
 
+  //simulating payment confirmation
+  document.querySelector("#btn-purchase").addEventListener("click",() => {
+    //purchaseClicked();
+  });
+
+  
+
   
 });
