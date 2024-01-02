@@ -27,7 +27,7 @@ window.addEventListener("load", () => {
   }
   //emptying cart
   document.querySelector("#empty-cart").addEventListener("click",() => {
-    //emptyCart();
+    emptyCart();
   });
 
   //simulating payment confirmation
@@ -53,7 +53,12 @@ window.addEventListener("load", () => {
 
     }
   }
-  
-
+  // emptyCart function 
+  const emptyCart = () => {
+    document.querySelector("tbody").innerHTML= "";
+    //updateCartTotal()
+    toggleShoppingControls(false);
+  }
+ 
   
 });
