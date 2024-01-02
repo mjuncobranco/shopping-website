@@ -25,6 +25,10 @@ window.addEventListener("load", () => {
       //addToCartClicked(e)
     });
   }
-  
+  //emptying cart
+  document.querySelector("#empty-cart").addEventListener("click",() => {
+    //emptyCart();
+  });
 
+  
 });
