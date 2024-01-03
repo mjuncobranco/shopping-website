@@ -1,7 +1,7 @@
 window.addEventListener("load", () => {
   let addedToCart = new bootstrap.Modal(
     document.querySelector("#addedToCart"),
-    {
+    { 
       keyboard: false,
     }
   );
@@ -60,7 +60,7 @@ window.addEventListener("load", () => {
   //simulating purchase and show alerts
   const purchaseClicked = () => {
     document.querySelector("tbody").innerHTML = "";
-    updateCartTotal()
+    updateCartTotal();
     toggleShoppingControls(false);
     cartPurchased.show();
     setTimeout(() => {
@@ -70,6 +70,7 @@ window.addEventListener("load", () => {
   //remove items from cart
   const removeCartItem = (e) => {
     let buttonClicked = e.target;
+    console.log(buttonClicked);
     let newRow = buttonClicked.parentNode.parentNode.getAttribute("row-number");
     document.querySelector(`#${newRow}`).remove();
     let numItemsAdded = document.querySelector("tbody").childElementCount;
@@ -149,9 +150,9 @@ window.addEventListener("load", () => {
         </td>`;
         cartRow.innerHTML = cartRowContents;
         document.querySelector("tbody").appendChild(cartRow);
-        cartRow.lastElementChild.lastElementChild.lastElementChild.firstElementChild.addEventListener("click", removeCartItem());
-        cartRow.firstElementChild.firstElementChild.firstElementChild.firstElementChild.addEventListener("change", updateCartTotal());
-        cartRow.firstElementChild.firstElementChild.firstElementChild.firstElementChild.addEventListener("input", updateCartTotal());
+        cartRow.lastElementChild.lastElementChild.lastElementChild.firstElementChild.addEventListener("click", removeCartItem);
+        cartRow.lastElementChild.firstElementChild.firstElementChild.firstElementChild.addEventListener("change", updateCartTotal);
+        cartRow.lastElementChild.firstElementChild.firstElementChild.firstElementChild.addEventListener("input", updateCartTotal);
         let input = cartRow.querySelector("input");
         let max = input.getAttribute("max");
         let min = input.getAttribute("min");
@@ -223,9 +224,6 @@ window.addEventListener("load", () => {
       e.preventDefault();
     });
   
-    // cart.addEventListener('dragleave',  (e)=> {
-    // });
-  
     cart.addEventListener("drop", () => {
       cart.classList.add("hvr-pulse");
       let productId = draggedItem.getAttribute("product-id");
@@ -239,5 +237,4 @@ window.addEventListener("load", () => {
       addItemToCart(productId, title, productName, price, imageSrc);
       updateCartTotal();
     });
-
 });

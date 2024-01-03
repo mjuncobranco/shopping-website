@@ -28,6 +28,7 @@ const GenerateContent = class {
     let year = new Date();
     document.querySelector(".date").innerHTML += year.getFullYear();
   };
+
   getProductFormat = () => {
     let product = `
     <div
@@ -68,7 +69,6 @@ const GenerateContent = class {
   setPageContent = (fruits) => {
     let card = "";
     let productContainer = document.querySelector('#products-list');
-    console.log(productContainer);
     for (let productNumber in fruits) {
       card = this.getProductFormat(); 
       card = card.replace(/xxx/,fruits[productNumber][0]);
@@ -83,4 +83,5 @@ const GenerateContent = class {
 };
 let obj = new GenerateContent();
 obj.getYear();
+
 obj.setPageContent(obj.fruits);
