@@ -1,4 +1,3 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Antic+Slab&family=Comfortaa:wght@500;600&family=Kameron:wght@400;700&family=Pacifico&display=swap");
 
 html {
@@ -95,7 +94,7 @@ h5 {
 
 td .card {
   max-width: 8rem;
-  margin:auto;
+  margin: auto;
 }
 
 td button span {
@@ -201,4 +200,42 @@ footer {
   padding-left: 0.3em;
   font-weight: bold;
   font-style: italic;
+}
+
+@media (min-width: 576px) {
+  body {
+    padding-top: 8.5rem;
+  }
+  .card-deck .card {
+    max-width: 45%;
+  }
+  footer {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    padding-top: 5.5rem;
+  }
+  .card-deck .card {
+    max-width: 30%;
+  }
+  footer {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 992px) {
+  html {
+    font-size: 1.285rem;
+  }
+  .modal-footer {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 1200px) {
+  .card-deck .card {
+    max-width: 22%;
+  }
 }
