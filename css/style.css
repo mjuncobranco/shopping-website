@@ -10,7 +10,7 @@ body {
   height: 100vh;
   padding-top: 11.5rem;
 }
-/* Header */
+
 .fa-bag-shopping {
   color: #222222;
   transform: rotate(25deg);
@@ -116,7 +116,7 @@ td button span {
 #alreadyAddedToCart .modal-content {
   background-color: #fff3cd;
 }
-/* Quantity selectors */
+
 .quantity {
   position: relative;
 }
@@ -192,4 +192,13 @@ input[type="number"] {
   cursor: default;
   text-decoration: none;
   opacity: 0.3;
+}
+footer {
+  font-size: 1.2rem;
+}
+.date {
+  color: #dc3545;
+  padding-left: 0.3em;
+  font-weight: bold;
+  font-style: italic;
 }
