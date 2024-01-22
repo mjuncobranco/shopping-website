@@ -25,20 +25,20 @@ window.addEventListener("load", () => {
       addToCartClicked(e);
     });
   }
-  //emptying cart
+  
   document
     .querySelector("#empty-cart")
     .addEventListener("click", () => emptyCart());
 
-  //simulating payment confirmation
+  
   document
     .querySelector("#btn-purchase")
     .addEventListener("click", () => purchaseClicked());
-  //stop pulsing effect on shopping cart
+  
   document.querySelector("#cart").addEventListener("click", () => {
     cart.classList.remove("hvr-pulse");
   });
-  //activate/deactivate cart buttons
+  
   const toggleShoppingControls = (enable) => {
     if (enable) {
       document.querySelector("#empty-cart").classList.remove("disabled");
@@ -50,14 +50,14 @@ window.addEventListener("load", () => {
       document.querySelector("#btn-purchase").classList.remove("hvr-pulse");
     }
   };
-  // emptyCart function
+ 
   const emptyCart = () => {
     document.querySelector("tbody").innerHTML = "";
     updateCartTotal();
     toggleShoppingControls(false);
   };
 
-  //simulating purchase and show alerts
+  
   const purchaseClicked = () => {
     document.querySelector("tbody").innerHTML = "";
     updateCartTotal();
@@ -67,7 +67,6 @@ window.addEventListener("load", () => {
       cartPurchased.hide();
     }, 2000);
   };
-  //remove items from cart
   const removeCartItem = (e) => {
     let buttonClicked = e.target;
     console.log(buttonClicked);
@@ -79,7 +78,7 @@ window.addEventListener("load", () => {
     }
     updateCartTotal();
   };
-  //add a new item to cart by clicking a cart button
+  
   const addToCartClicked = (e) => {
     let buttonClicked = e.target;
     let shopItem = buttonClicked.parentNode.parentNode.parentNode;
@@ -95,7 +94,7 @@ window.addEventListener("load", () => {
     updateCartTotal();
   };
 
-  //generate row for cart
+ 
   const addItemToCart = (productId, title, productName, price, imageSrc) => {
     let rowId = "row-number-" + productId;
     let cartItems = document.querySelectorAll("tr");
